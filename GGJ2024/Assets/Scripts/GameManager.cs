@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+    public int score;
+
+
+    private void Awake()
+    {
+        if(Instance != null) { Destroy(Instance); }
+        Instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +24,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Score(int _score)
+    {
+        score += _score;
     }
 }
