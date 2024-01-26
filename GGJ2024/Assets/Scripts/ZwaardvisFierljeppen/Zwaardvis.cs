@@ -12,6 +12,7 @@ public class Zwaardvis : MonoBehaviour
     public Collider2D ground; //YUCK
     public Transform measurePoint;
     public ZFCamera zfcam;
+    public GameObject rhythmControl;
 
     float currentSpeed;
     Animator animator;
@@ -50,10 +51,10 @@ public class Zwaardvis : MonoBehaviour
             {
                 animator.SetTrigger("Flip"); isFlipping = true;
                 rb.gravityScale = 0.0f;
+                rhythmControl.SetActive(false);
             }
 
             //Debug
-            if (Input.GetKeyDown(KeyCode.W)) { currentSpeed += speedIncreaseMod; }
 
             rb.velocity = new Vector3(currentSpeed, rb.velocity.y);
         }
@@ -87,7 +88,14 @@ public class Zwaardvis : MonoBehaviour
         hasScored = true;
         zfcam.enabled = false;
         int score = Mathf.Max(0, (int)(transform.position.x - measurePoint.position.x));
-        GameManager.Instance.Score(score);
+        GameManager.Instance.IncreaseScore(score);
         Debug.Log(score);
+    }
+
+    public void IncreaseSpeed(float acc)
+    {
+        if(hasFlipped || isFlipping) { return; }
+
+        currentSpeed += (Mathf.Max(speedIncreaseMod * acc,0));
     }
 }
