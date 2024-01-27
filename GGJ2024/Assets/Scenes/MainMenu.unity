@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalScore: {fileID: 385198177}
-  sceneIndices: 000000000100000002000000
+  sceneIndices: 00000000010000000200000003000000
   currentIndex: 0
 --- !u!1 &261235209
 GameObject:

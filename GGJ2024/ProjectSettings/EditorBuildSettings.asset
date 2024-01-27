@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FishBowling.unity
     guid: c187668adee8c0f4c9dc41acc463239b
+  - enabled: 1
+    path: Assets/Scenes/StruisvogelHockey.unity
+    guid: 45b67f63d9007b84683668728986f47e
   m_configObjects: {}
