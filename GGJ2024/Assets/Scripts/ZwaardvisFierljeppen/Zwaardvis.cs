@@ -39,6 +39,7 @@ public class Zwaardvis : MonoBehaviour
         transform.position = origPos;
         currentSpeed = startSpeed;
         hasFlipped = false;
+        isFlipping = false;
         rb.gravityScale = 1.0f;
         onGround = true;
     }
