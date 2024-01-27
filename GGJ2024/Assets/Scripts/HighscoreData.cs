@@ -15,9 +15,10 @@ public class HighscoreData
 
     public void AddScore(HighscoreEntry entry)
     {
-        for (int i = highscores.Count-1; i>0; i++)
+        highscores.Add(entry);
+
+        for (int i = highscores.Count-1; i>0; i--)
         {
-            highscores.Add(entry);
             if (highscores[i].score > highscores[i - 1].score) { Utility.Swap(ref highscores, i - 1, i); }
         }
 

@@ -34,7 +34,7 @@ public class HighscoreDisplay : MonoBehaviour
             scores[i].gameObject.SetActive(i < hs.highscores.Count);
 
             if(i< hs.highscores.Count)
-            {
+            {                
                 names[i].text = hs.highscores[i].username;
                 scores[i].text = hs.highscores[i].score.ToString();
             }
