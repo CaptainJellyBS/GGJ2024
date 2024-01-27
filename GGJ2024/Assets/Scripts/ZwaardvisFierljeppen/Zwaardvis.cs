@@ -89,7 +89,7 @@ public class Zwaardvis : MonoBehaviour
         hasScored = true;
         zfcam.enabled = false;
         int score = Mathf.Max(0, (int)(transform.position.x - measurePoint.position.x));
-        GameManager.Instance.IncreaseScore(score);
+        Fierljeppen.Instance.IncreaseScore(score);
         Debug.Log(score);
     }
 

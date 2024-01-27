@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,15 +14,15 @@ public class GameManager : MonoBehaviour
         get { return score; }
         set { score = value; totalScore.text = score.ToString(); }
     }
-    public TextMeshProUGUI totalScore, scoredText;
-    public GameObject scorePanel;
-    float scoreTimer = 0.0f;
-
+    public TextMeshProUGUI totalScore;
+    public int[] sceneIndices = new int[]{ 0, 1 };
+    public int currentIndex = 0;
 
     private void Awake()
     {
-        if(Instance != null) { Destroy(Instance); }
+        if(Instance != null) { Destroy(Instance.gameObject); }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
@@ -35,27 +37,10 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void IncreaseScore(int _score)
+    public void NextScene()
     {
-        Score += _score;
-        StartCoroutine(ShowScore(_score));
+        currentIndex++; currentIndex %= sceneIndices.Length;        
+        SceneManager.LoadScene(sceneIndices[currentIndex]);
     }
-
-    IEnumerator ShowScore(int _score)
-    {
-        if (scoreTimer > 0.0f) { scoreTimer = 3.0f; yield break; }
-
-        scorePanel.SetActive(true);
-        scoredText.text = _score.ToString();
-        scoreTimer = 3.0f;
-
-        while(scoreTimer > 0.0f)
-        {
-            yield return null;
-            scoreTimer -= Time.deltaTime;            
-        }
-
-        scorePanel.SetActive(false);
-        scoreTimer = 0.0f;
-    }
+    
 }
