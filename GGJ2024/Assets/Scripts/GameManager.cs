@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(HighscoreManager))]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI totalScore;
     public int[] sceneIndices = new int[]{ 0, 1 };
     public int currentIndex = 0;
+    public HighscoreManager highscoreManager;
 
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Score = 0;
+        highscoreManager = GetComponent<HighscoreManager>();
     }
 
     // Update is called once per frame
