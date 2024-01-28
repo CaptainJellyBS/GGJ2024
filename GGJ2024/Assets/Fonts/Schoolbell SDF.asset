@@ -1156,6 +1156,21 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
+  - m_Index: 43
+    m_Metrics:
+      m_Width: 40.078125
+      m_Height: 68.109375
+      m_HorizontalBearingX: 3.078125
+      m_HorizontalBearingY: 65.828125
+      m_HorizontalAdvance: 44.828125
+    m_GlyphRect:
+      m_X: 496
+      m_Y: 274
+      m_Width: 41
+      m_Height: 69
+    m_Scale: 1
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 8230
@@ -1424,6 +1439,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 82
     m_GlyphIndex: 71
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 54
+    m_GlyphIndex: 43
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 9193914463187825701}
@@ -1695,6 +1714,10 @@ MonoBehaviour:
     m_Y: 231
     m_Width: 60
     m_Height: 91
+  - m_X: 486
+    m_Y: 264
+    m_Width: 60
+    m_Height: 88
   m_FreeGlyphRects:
   - m_X: 145
     m_Y: 28
@@ -1788,10 +1811,6 @@ MonoBehaviour:
     m_Y: 317
     m_Width: 17
     m_Height: 706
-  - m_X: 298
-    m_Y: 350
-    m_Width: 725
-    m_Height: 673
   - m_X: 167
     m_Y: 247
     m_Width: 12
@@ -1912,10 +1931,6 @@ MonoBehaviour:
     m_Y: 309
     m_Width: 42
     m_Height: 714
-  - m_X: 486
-    m_Y: 237
-    m_Width: 5
-    m_Height: 786
   - m_X: 555
     m_Y: 177
     m_Width: 23
@@ -1928,21 +1943,33 @@ MonoBehaviour:
     m_Y: 257
     m_Width: 174
     m_Height: 766
-  - m_X: 377
-    m_Y: 322
-    m_Width: 646
-    m_Height: 701
-  - m_X: 377
-    m_Y: 317
-    m_Width: 178
-    m_Height: 706
   - m_X: 615
     m_Y: 274
     m_Width: 408
     m_Height: 749
+  - m_X: 298
+    m_Y: 352
+    m_Width: 725
+    m_Height: 671
+  - m_X: 298
+    m_Y: 350
+    m_Width: 188
+    m_Height: 673
   - m_X: 486
+    m_Y: 237
+    m_Width: 5
+    m_Height: 27
+  - m_X: 546
+    m_Y: 322
+    m_Width: 477
+    m_Height: 701
+  - m_X: 377
+    m_Y: 317
+    m_Width: 109
+    m_Height: 706
+  - m_X: 546
     m_Y: 264
-    m_Width: 69
+    m_Width: 9
     m_Height: 759
   m_fontInfo:
     Name: 
