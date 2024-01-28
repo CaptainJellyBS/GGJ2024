@@ -43,10 +43,10 @@ public class HockeyBall : MonoBehaviour
         if (hasBeenScored) { yield break; }
         hasBeenScored = true;
         rb.useGravity = true;
-
+        rb.velocity = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(0.0f, 1.0f),0).normalized * Random.Range(8.0f, 14.0f);
         StruisvogelHockey.Instance.ScoreBall();
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(4.0f);
         Destroy(gameObject);
     }    
 
